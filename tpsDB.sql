@@ -17,6 +17,10 @@ CREATE TABLE UserLogin(
 
 );
 
+CREATE TABLE UserActivity(
+
+);
+
 INSERT INTO Staff(
 
 );
@@ -31,4 +35,8 @@ INSERT INTO Request(
 
 INSERT INTO UserLogin(
 
+);
+
+INSERT INTO UserActivity(
+  
 );
