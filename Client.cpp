@@ -16,7 +16,7 @@ void setBusinessName(string s);
 void setContactName(string s);
 void setPhoneNumber(string s);
 void setContractDate(string s);
-
+Client(int u, string c, string s, string z, string a, string b, string cn, string ct, string p, string cd);
 
 private:
 string businessName;
@@ -60,4 +60,18 @@ void Client::setPhoneNumber(string s)
 void Client::setContractDate(string s)
 {
     contractDate = s;
+}
+//constructors
+Client::Client(int u, string c, string s, string z, string a, string b, string cn, string ct, string p, string cd)
+{
+    userID = u;
+    city = c;
+    state = s;
+    zipcode = z;
+    address = a;
+    businessName = b;
+    contactName = cn;
+    clientType = ct;
+    phoneNumber = p;
+    contractDate = cd;
 }
