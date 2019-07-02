@@ -7,3 +7,4 @@ Staff users will create an account, and be assigned to client requests
 Admin users will create an account and review requests made by the client
 
 7.1.2019: Created Skeleton code for DB and C++ Classes. Created basic HTML pages for CLient and Staff Account Creation - ASB 
+7.2.2019 Added to C++ Class code, added attributes, getter/setter functions and constructors - ASB
