@@ -29,7 +29,13 @@ void setZipcode(string x);
 
 void setAddress(string x);
 
-private:
+User(int u, string c, string s, string z, string a);
+User(int u, string c, string s, string z, string a, string b, string cn, string ct, string p, string cd);
+User();
+
+
+
+protected:
 
 int userID;
 
@@ -47,31 +53,36 @@ string address;
 
 //Getters
 
-int User::getUserID(){
+int User::getUserID()
+{
 
  return userID; 
 
 }
 
-string User::getCity(){
+string User::getCity()
+{
 
  return city; 
 
 }
 
-string User::getState(){
+string User::getState()
+{
 
  return state; 
 
 }
 
-string User::getZipcode(){
+string User::getZipcode()
+{
 
  return zipcode; 
 
 }
 
-string User::getAddress(){
+string User::getAddress()
+{
 
  return address; 
 
@@ -79,32 +90,50 @@ string User::getAddress(){
 
 //Setters
 
-void User::setUserID(int x){
+void User::setUserID(int x)
+{
 
  userID = x; 
 
 }
 
-void User::setCity(string x){
+void User::setCity(string x)
+{
 
  city = x; 
 
 }
 
-void User::setState(string x){
+void User::setState(string x)
+{
 
  state = x; 
 
 }
 
-void User::setZipcode(string x){
+void User::setZipcode(string x)
+{
 
  zipcode = x; 
 
 }
 
-void User::setAddress(string x){
+void User::setAddress(string x)
+{
 
  address = x; 
 
+}
+//constructors
+User::User()
+{
+    
+}
+User::User(int u, string c, string s, string z, string a)
+{
+    userID = u;
+    city = c;
+    state = s;
+    zipcode = z;
+    address = a;
 }
