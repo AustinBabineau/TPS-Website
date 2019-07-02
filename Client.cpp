@@ -1,5 +1,10 @@
 //C++ Class for Client
 
+#include <iostream>
+#include <cstring>
+
+using namespace std;
+
 class Client: public User{
 
 public:
