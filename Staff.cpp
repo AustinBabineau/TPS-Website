@@ -1,5 +1,5 @@
 //C++ Class for Staff
-
+#include "User.cpp"
 #include <iostream>
 #include <cstring>
 
