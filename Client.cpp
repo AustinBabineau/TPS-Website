@@ -1,5 +1,5 @@
 //C++ Class for Client
-
+#include "User.cpp"
 #include <iostream>
 #include <cstring>
 
