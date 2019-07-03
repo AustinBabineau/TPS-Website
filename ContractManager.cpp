@@ -1,5 +1,5 @@
 //C++ code for Contract Manager class
-
+#include "User.cpp"
 #include <iostream>
 #include <cstring>
 
