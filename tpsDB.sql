@@ -64,3 +64,16 @@ VALUES 	(001, 'JohnDoe', 'classAct17364!'),
 	(004, 'A_Babineau', 'askJeevs42!'),
 	(005, 'CKelly', 'Birdlaw09878'),
 	(006, 'LMalvo', 'darkNess65676');
+
+
+/*    
+/*Test Queries*/
+
+/*Show Staff Matching Request Needs*/
+SELECT * FROM Staff WHERE  city = 'Chicago' AND profession = "Developer" AND salary <= 60000 AND education = 'Bachelors';
+/*User Login*/
+SELECT userID FROM UserLogin WHERE userName = 'A_Babineau' AND userPassword = 'askJeevs42!';
+/*Show Staff Info*/
+SELECT * FROM Staff WHERE staffID = 1;
+
+*/
