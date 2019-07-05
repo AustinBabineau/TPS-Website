@@ -1,4 +1,4 @@
-//SQL code for TPS Database
+/*SQL code for TPS Database*/
 CREATE DATABASE tpsDB;
 
 CREATE TABLE Client (
