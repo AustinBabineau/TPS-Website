@@ -111,7 +111,7 @@ INSERT INTO Staff (staffID, userID, firstName, lastName, streetAddress, city, st
 
 VALUES  (001, 004, 'Austin', 'Babineau', '123 3rd Street', 'Chicago', 'IL', 60602, 3123453432, 'AustinBabineau@gmail.com', 'Bachelors', 'Developer', 75000),
 
-	(002, 005, 'Charlie', 'Kelly', '376 37th Avenue', 'Philadelphia', 'PA', 19019, 2678753432, 'c.Kelly@gmail.com', 'Bachelors', 'Analyst', 85000),
+	(002, 005, 'Charlie', 'Kelly', '376 37th Avenue', 'Philadelphia', 'PA', 19019, 2678753432, 'c.Kelly@gmail.com', 'Bachelors', 'Security Analyst', 85000),
 
 	(003, 006, 'Lorne', 'Malvo', '567 Blue Ox Road', 'Fargo', 'ND', 58102, 7015764837, 'L.Malvo@gmail.com', 'Masters', 'Engineer', 105000),
 
@@ -119,11 +119,11 @@ VALUES  (001, 004, 'Austin', 'Babineau', '123 3rd Street', 'Chicago', 'IL', 6060
     
     (005, 008, 'Stan', 'Marsh', '1546 23rd Street', 'Chicago', 'IL', 60601, 3124569852, 'S.Marsh@gmail.com', 'Associates', 'Developer', 45000),
     
-    (006, 009, 'Peter', 'Mayfield', '6548 Lake Street', 'Chicago', 'IL', 60605, 3126547412, 'P.Mayfield@gmail.com', 'Associates', 'Tester', 32000),
+    (006, 009, 'Peter', 'Mayfield', '6548 Lake Street', 'Chicago', 'IL', 60605, 3126547412, 'P.Mayfield@gmail.com', 'Associates', 'Customer Support', 32000),
     
     (007, 010, 'Bill', 'Baggins', '65896 Monroe Avenue', 'Chicago', 'IL', 60601, 3126548569, 'B.Baggins@gmail.com', 'Masters', 'Project Manager', 85000),
     
-    (008, 011, 'Scott', 'Pippin', '6599 18th Street', 'Chicago', 'IL', 60610, 3129632565, 'S.Pippin@gmail.com', 'Associates', 'Tester', 32000);
+    (008, 011, 'Scott', 'Pippin', '6599 18th Street', 'Chicago', 'IL', 60610, 3129632565, 'S.Pippin@gmail.com', 'Associates', 'Customer Support', 32000);
 
 /*Enter Login Info*/
 INSERT INTO UserLogin (userID, userName, userPassword)
