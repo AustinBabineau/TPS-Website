@@ -13,3 +13,4 @@ Admin users will create an account and review requests made by the client
 7.5.2019 Added a few test Queries to the database along with adding additional data - ASB
 7.8.2019 Added more test Queries to the database, added one request record - ASB
 7.9.2019 Updated profession dropdowns for Staff Creation and Request Creation HTML pages
+7.10.2019 Created Home Page html code, still needs php functionality - ASB
