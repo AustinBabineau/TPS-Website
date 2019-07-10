@@ -1,0 +1,42 @@
+//html code for Home Page
+<!DOCTYPE html>
+
+<html>
+
+<style>
+
+body {
+
+background-color:hsl(0,0%,88%);
+
+}
+</style>
+
+<body>
+
+    <center>
+
+<h2> Taylor's Professional Services</h2>
+<br>
+<hr />
+
+<h2>Clients</h2>
+
+<p1>If your company has already registered for an account please use the login button to access your account. If your company has not yet registered please use the following button to create your account.</p1>
+<br>
+<button type="button">Create Client Account</button> 
+<hr />
+<h2>Freelance Professionals</h2>
+
+<p1>If you have already created an account please use the login button to access your account. If you want to be create a profile please use the button below.</p1>
+<br>
+<button type="button">Create Staff Account</button> 
+<hr />
+
+<button type="button">Login</button> <button type="button">About Us</button> 
+
+<hr />
+</center>
+</body>
+
+</html>
