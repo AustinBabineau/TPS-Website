@@ -3,9 +3,9 @@ CREATE DATABASE tpsDB;
 
 CREATE TABLE Client (
 
-clientID int,
+clientID int NOT NULL IDENTITY(1,1),
 
-userID int,
+userID int NOT NULL,
 
 contactName varchar(25),
 
@@ -19,9 +19,13 @@ state varchar(50),
 
 zip int,
 
-phone int,
+phone varchar(10),
 
-email varchar(50)
+email varchar(50),
+
+PRIMARY KEY (clientID),
+
+FOREIGN KEY (userID) REFERENCES userLogin(userID)
 
 );
 
@@ -29,9 +33,9 @@ email varchar(50)
 
 CREATE TABLE Staff (
 
-staffID int,
+staffID int NOT NULL IDENTITY(1,1),
 
-userID int,
+userID int NOT NULL,
 
 firstName varchar(25),
 
@@ -45,7 +49,7 @@ state varchar(50),
 
 zip int,
 
-phone int,
+phone varchar(10,
 
 email varchar(50),
 
@@ -57,7 +61,12 @@ salary int,
 
 resume varchar(255),
 
-photo varchar(50)
+photo varchar(50),
+
+PRIMARY KEY (staffID),
+
+FOREIGN KEY (userID) REFERENCES userLogin(userID)
+
 
 );
 
@@ -81,17 +90,25 @@ education varchar(25),
 
 status varchar(25)
 
+PRIMARY KEY (requestID),
+
+FOREIGN KEY (clientID) REFERENCES Client(clientID),
+
+FOREIGN KEY (staffID) REFERENCES STAFF(staffID)
+
 );
 
 
 
 CREATE TABLE UserLogin (
 
-userID int,
+userID int NOT NULL IDENTITY(1,1),
 
-userName varchar(25),
+userName varchar(25) NOT NULL,
 
-userPassword varchar(50)
+userPassword varchar(50) NOT NULL,
+
+PRIMARY KEY (userID)
 
 );
 
@@ -107,23 +124,23 @@ VALUES  (10001, 001, 'John Doe', 'Doe Enterprises', '1 Doe Avenue', 'Chicago', '
 
 /*Enter Client Info*/
 
-INSERT INTO Staff (staffID, userID, firstName, lastName, streetAddress, city, state, zip, phone, email, education, profession, salary)
+INSERT INTO Staff ( userID, firstName, lastName, streetAddress, city, state, zip, phone, email, education, profession, salary)
 
-VALUES  (001, 004, 'Austin', 'Babineau', '123 3rd Street', 'Chicago', 'IL', 60602, 3123453432, 'AustinBabineau@gmail.com', 'Bachelors', 'Developer', 75000),
+VALUES  ( 004, 'Austin', 'Babineau', '123 3rd Street', 'Chicago', 'IL', 60602, 3123453432, 'AustinBabineau@gmail.com', 'Bachelors', 'Developer', 75000),
 
-	(002, 005, 'Charlie', 'Kelly', '376 37th Avenue', 'Philadelphia', 'PA', 19019, 2678753432, 'c.Kelly@gmail.com', 'Bachelors', 'Security Analyst', 85000),
+	( 005, 'Charlie', 'Kelly', '376 37th Avenue', 'Philadelphia', 'PA', 19019, 2678753432, 'c.Kelly@gmail.com', 'Bachelors', 'Security Analyst', 85000),
 
-	(003, 006, 'Lorne', 'Malvo', '567 Blue Ox Road', 'Fargo', 'ND', 58102, 7015764837, 'L.Malvo@gmail.com', 'Masters', 'Engineer', 105000),
+	( 006, 'Lorne', 'Malvo', '567 Blue Ox Road', 'Fargo', 'ND', 58102, 7015764837, 'L.Malvo@gmail.com', 'Masters', 'Engineer', 105000),
 
-    (004, 007, 'James', 'Klein', '772 3rd Street', 'Chicago', 'IL', 60606, 31256985697, 'J.Klein@gmail.com', 'Masters', 'Engineer', 65000),
+    ( 007, 'James', 'Klein', '772 3rd Street', 'Chicago', 'IL', 60606, 31256985697, 'J.Klein@gmail.com', 'Masters', 'Engineer', 65000),
     
-    (005, 008, 'Stan', 'Marsh', '1546 23rd Street', 'Chicago', 'IL', 60601, 3124569852, 'S.Marsh@gmail.com', 'Associates', 'Developer', 45000),
+    ( 008, 'Stan', 'Marsh', '1546 23rd Street', 'Chicago', 'IL', 60601, 3124569852, 'S.Marsh@gmail.com', 'Associates', 'Developer', 45000),
     
-    (006, 009, 'Peter', 'Mayfield', '6548 Lake Street', 'Chicago', 'IL', 60605, 3126547412, 'P.Mayfield@gmail.com', 'Associates', 'Customer Support', 32000),
+    ( 009, 'Peter', 'Mayfield', '6548 Lake Street', 'Chicago', 'IL', 60605, 3126547412, 'P.Mayfield@gmail.com', 'Associates', 'Customer Support', 32000),
     
-    (007, 010, 'Bill', 'Baggins', '65896 Monroe Avenue', 'Chicago', 'IL', 60601, 3126548569, 'B.Baggins@gmail.com', 'Masters', 'Project Manager', 85000),
+    ( 010, 'Bill', 'Baggins', '65896 Monroe Avenue', 'Chicago', 'IL', 60601, 3126548569, 'B.Baggins@gmail.com', 'Masters', 'Project Manager', 85000),
     
-    (008, 011, 'Scott', 'Pippin', '6599 18th Street', 'Chicago', 'IL', 60610, 3129632565, 'S.Pippin@gmail.com', 'Associates', 'Customer Support', 32000);
+    ( 011, 'Scott', 'Pippin', '6599 18th Street', 'Chicago', 'IL', 60610, 3129632565, 'S.Pippin@gmail.com', 'Associates', 'Customer Support', 32000);
 
 /*Enter Login Info*/
 INSERT INTO UserLogin (userID, userName, userPassword)
